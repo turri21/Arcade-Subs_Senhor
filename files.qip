@@ -1,0 +1,26 @@
+set_global_assignment -name SYSTEMVERILOG_FILE "Arcade-Subs.sv"
+set_global_assignment -name VHDL_FILE rtl/T65/T65_Pack.vhd
+set_global_assignment -name VHDL_FILE rtl/T65/T65_MCode.vhd
+set_global_assignment -name VHDL_FILE rtl/T65/T65_ALU.vhd
+set_global_assignment -name VHDL_FILE rtl/T65/T65.vhd
+set_global_assignment -name VHDL_FILE rtl/dpram.vhd
+
+
+set_global_assignment -name VHDL_FILE rtl/subs_core.vhd
+set_global_assignment -name VHDL_FILE rtl/sync.vhd
+set_global_assignment -name VHDL_FILE rtl/svfilter.vhd
+set_global_assignment -name VERILOG_FILE rtl/SVF.v
+set_global_assignment -name VHDL_FILE rtl/sid_coeffs.vhd
+set_global_assignment -name VHDL_FILE rtl/ram1k.vhd
+set_global_assignment -name VHDL_FILE rtl/playfield.vhd
+set_global_assignment -name VHDL_FILE rtl/motion.vhd
+set_global_assignment -name VHDL_FILE rtl/mixer.vhd
+set_global_assignment -name VHDL_FILE rtl/input.vhd
+set_global_assignment -name VHDL_FILE rtl/cpu_mem.vhd
+set_global_assignment -name VHDL_FILE rtl/audio.vhd
+
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/joy2quad.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/alphablend.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/sdram.sv
+
+set_global_assignment -name VHDL_FILE rtl/roms/PROM_SYNC.vhd
