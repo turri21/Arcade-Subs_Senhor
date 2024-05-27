@@ -160,16 +160,31 @@ module emu
 	input         OSD_STATUS
 );
 
+///////// Default values for ports not used in this core /////////
+
 assign VGA_F1    = 0;
 assign VGA_SCALER= 0;
-assign VGA_DISABLE = 0;
+assign HDMI_FREEZE = 0;
+assign VGA_DISABLE=0;
 
-assign USER_OUT  = '1;
+assign LED_USER  = ioctl_download;
 assign LED_DISK  = 0;
 assign LED_POWER = 0;
-assign LED_USER  = ioctl_download;
-assign FB_FORCE_BLANK = '0;
-assign HDMI_FREEZE = 0;
+
+assign ADC_BUS  = 'Z;
+assign USER_OUT = '1;
+assign {UART_RTS, UART_TXD, UART_DTR} = 0;
+assign {SD_SCK, SD_MOSI, SD_CS} = 'Z;
+
+assign {SDRAM_DQ, SDRAM_A, SDRAM_BA, SDRAM_CLK, SDRAM_CKE, SDRAM_DQML, SDRAM_DQMH, SDRAM_nWE, SDRAM_nCAS, SDRAM_nRAS, SDRAM_nCS} = 'Z;
+assign {DDRAM_CLK, DDRAM_BURSTCNT, DDRAM_ADDR, DDRAM_DIN, DDRAM_BE, DDRAM_RD, DDRAM_WE} = '0;  
+assign BUTTONS = 0;
+
+assign AUDIO_MIX = 0;
+
+
+
+
 
 
 wire [1:0] ar = status[15:14];
@@ -207,7 +222,7 @@ localparam CONF_STR = {
 wire [31:0] status;
 wire [15:0] sdram_sz;
 wire  [1:0] buttons;
-wire  		video_rotated;
+wire  		video_rotated=0;
 wire        forced_scandoubler;
 wire        direct_video;
 
