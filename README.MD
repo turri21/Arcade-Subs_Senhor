@@ -1,3 +1,8 @@
+-=(Subs_Senhor notes)=-
+
+Tested: Working Video 720p, 1080p & Sound.
+
+___
 # Atari Subs by James Sweet
 
 Atari Subs is an early Atari Raster game. It had a color overlay, which is emulated by a PNG file in the overlays directory.
