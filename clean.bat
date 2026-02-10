@@ -11,6 +11,5 @@ rmdir /s /q greybox_tmp
 del PLLJ_PLLSPE_INFO.txt
 del *.qws
 del *.ppf
-del *.qip
 del *.ddb
 pause
